@@ -1,0 +1,50 @@
+robotframework
+robotframework-seleniumlibrary
+robotframework-requests
+robotframework-databaselibrary
+robotframework-excel
+robotframework-pabot
+#robotframework-whitelibrary
+#robotframework-pyautogui
+robotframework-browser
+robotframework-pandaslibrary
+robotframework-jsonlibrary
+robotframework-ftplibrary
+
+project/
+│
+├── src/
+│   ├── setup_module.py      # Setup logic
+│   ├── teardown_module.py   # Tear down logic
+│   ├── common.py            # Shared utilities or functions
+│
+├── tests/
+│   ├── test_suite1.py       # First test suite
+│   ├── test_suite2.py       # Second test suite
+│
+├── config/
+│   ├── config.yaml          # Configuration for test environments
+│
+├── reports/                 # Directory for reports and logs
+│
+└── README.md                # Project documentation
+
+##########################>>>>>>>>>>..
+project/
+│
+├── resources/
+│   ├── Setup.robot          # Setup-specific reusable keywords
+│   ├── Teardown.robot       # Tear down-specific reusable keywords
+│   ├── Common.robot         # Common keywords or variables
+│
+├── testcases/
+│   ├── TestSuite1.robot     # First test suite
+│   ├── TestSuite2.robot     # Second test suite
+│
+├── logs/                    # Directory for test logs, reports, and screenshots
+│
+├── config/
+│   ├── environment.yaml     # Environment-specific configuration
+│   ├── variables.robot      # Global variables
+│
+└── README.md                # Project documentation
