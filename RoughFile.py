@@ -4,3 +4,12 @@ score = input("my score is :\n")
 print("all result" +first_name+" " +score)
 ###indexing###
 #indexing#
+
+
+
+
+
+
+
+###ddasd
+
