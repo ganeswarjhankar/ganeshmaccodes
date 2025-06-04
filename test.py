@@ -1,13 +1,9 @@
-num1=10
-num2=20
+# test_sample.py
 
-print("swap before ",num1,num2)
-temp=num1
-num1=num2
-num2=temp
+def add(a, b):
+    return a + b
 
-print("swap after ",num1,num2)
-
-
-
-
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0

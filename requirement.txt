@@ -10,6 +10,7 @@ robotframework-browser
 robotframework-pandaslibrary
 robotframework-jsonlibrary
 robotframework-ftplibrary
+pytest
 
 project/
 │
