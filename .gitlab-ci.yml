@@ -1,10 +1,38 @@
 stages:
   - test
+  - build
+  - deploy
 
-python_tests:
+variables:
+  PROJECT_DIR: $CI_PROJECT_DIR
+
+test_job:
   stage: test
   image: python:3.10
   before_script:
     - pip install -r requirement.txt
   script:
-    - python test_sample.py
+    - pytest
+  artifacts:
+    paths:
+      - test-reports/
+    when: always
+
+build_job:
+  stage: build
+  image: python:3.10
+  script:
+    - mkdir -p build
+    - echo "Packaging app..." > build/build_log.txt
+    - echo "Version 1.0" > build/version.txt
+  artifacts:
+    paths:
+      - build/
+
+deploy_job:
+  stage: deploy
+  image: python:3.10
+  script:
+    - echo "Deploying from build directory:"
+    - cat build/version.txt
+    - echo "Deployed to fake-server 🚀"
